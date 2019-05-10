@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <link rel="stylesheet" href="node_modules/bootstrap/compiler/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/estilo.css">
+        <link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/css/estilo.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet ">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,500,600,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Viga" rel="stylesheet">
+        <title>Hello World</title>
+    </head>
+    <body>
+
+<main>
+<header >
+    <nav class="navbar navbar-light colormenu" style="padding: .1rem">
+    <a class="navbar-brand" href="/"><img src="../img/logo.png" style="max-width:200px; max-height: 50px"></a>
+  <a class="navbar-brand" href="#">
+    <a href="#" class="btn btnlaranja" style="color: #F1F1F1; border-radius: 20px; ">Sair <i class="fa fa-share-square-o" aria-hidden="true"></i></a>
+  </a>
+</nav>
+  </header>
+<br>
+<div class="container">
+
+<div class="card mb-3" style="max-width: 540px; background: #8fb1b31a; border: none;">
+  <div class="row">
+    <div class="col-md-4 text-center"><br>
+      <img src="../img/usuario.png" alt="foto de aluno" class="rounded-circle fotoaluno img-fluid"/>
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title Nomeperfil">Nome do Aluno</h5>
+        <div class="descriperfil">
+                            Modalidade: Musculação
+                            
+                        </div>
+                         <div class="descriperfil">
+                            Data de Pagamento: 20/04/2019
+                        </div>
+                         <div class="descriperfil">
+                            Instrutor: Jorce Costa
+                        </div>
+                        <br>
+                        <div class="text-center">
+                          <a href="edit.html" class="btn btnlaranja btn-sm">AVALIAÇÃO FÍSICA <i class="fa fa-line-chart" aria-hidden="true"  style="color: #F1F1F1"></i></a>
+                        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+                        
+    
+        <div class="col-md-4 ">
+           <div class="">
+              <p class="nomealuno" style="font-size: 20px">Sequência Realizada </p>
+           <p class="">
+      
+              <span class="fontvigor" style="font-size: 25px"> A  <i class="fa fa-hand-o-right playicon" aria-hidden="true"></i> B <i class="fa fa-hand-o-right playicon" aria-hidden="true"></i> C
+             
+             </span>
+          </p>
+        </div>
+        </div>
+    </div>
+    </div>
+</div>
+   <br><br><br>
+<footer>
+    <nav class="nav nav-pills nav-fill fixed-bottom" style="border-top: #B95922; background-color: #8fb1b31a">
+  <a class="nav-item nav-link link-nav" href="perfil.html" ><img src="img/user.svg" style="max-width: 30px; max-height: 30px"></a>
+  <a class="nav-item nav-link link-nav" href="ficha.html"><img src="img/calendar.svg" style="max-width: 30px; max-height: 30px"></a>
+</nav>
+  </footer>
+
+  </main>
+</body>
+         <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/popper.js/dist/popper.js"></script>
+    <script src="node_modules/bootstrap/dist/bootstrap.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>
