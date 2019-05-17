@@ -14,6 +14,7 @@
   "license": "Apache-2.0",
   "dependencies": {
     "bootstrap": "^4.3.1",
+    "cordova-android": "^8.0.0",
     "cordova-browser": "^6.0.0",
     "jquery": "^3.4.0",
     "popper.js": "^1.15.0"
@@ -26,7 +27,8 @@
       "cordova-plugin-whitelist": {}
     },
     "platforms": [
-      "browser"
+      "browser",
+      "android"
     ]
   }
 }
