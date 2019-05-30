@@ -1,3 +1,37 @@
+@font-face{
+   font-family: Roboto;
+ src: url(/fonts/Roboto/Roboto-Black.ttf);
+}
+@font-face{
+  font-family: IBM Plex Sans;
+  src: url(/fonts/IBM_Plex_Sans/IBMPlexSans-Medium.ttf);
+}
+@font-face{
+  font-family: IBM Plex Sans;
+  src: url(/fonts/IBM_Plex_Sans/IBMPlexSans-Regular.ttf);
+}
+@font-face{
+  
+  src: url(/fonts/IBM_Plex_Sans/IBMPlexSans-SemiBold.ttf);
+}
+@font-face{
+  font-family: Viga;
+  src: url(/fonts/Viga/Viga-Regular.ttf);
+}
+@font-face{
+  font-family: IBM Plex Sans ;
+  src: url(/fonts/IBM_Plex_Sans/IBMPlexSans-Bold.ttf);
+  font-weight: bold;
+}
+@font-face{
+  
+  src: url(/fonts/Roboto/Roboto-Bold.ttf);
+}
+@font-face{
+  font-family: SecularOne;
+  src: url(/fonts/Secular_One/SecularOne-Regular.ttf);
+}
+
 main{
   background-color: #fff;
 }
