@@ -28,22 +28,17 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+         <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
         <link rel="stylesheet" href="node_modules/bootstrap/compiler/bootstrap.css">
         <link rel="stylesheet" type="text/css" href="css/index.css">
-        <link rel="stylesheet" type="text/css" href="css/estilo.css">
         <link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="/css/estilo.css">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet ">
-        <link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,500,600,700" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Viga" rel="stylesheet">
-        <title>Hello World</title>
+        <title>Academia Fitness</title>
     </head>
-    <body>
+    <body style="background-color: #fff;">
 <main>
 <header >
     <nav class="navbar navbar-light colormenu" style="padding: .1rem">
@@ -187,7 +182,7 @@
 </div>
     </div>
     <div class="col-8">
-      <div class="card-body">
+      <div class="card-body text-center">
         
         <h5 class="card-title text-left ficha text-white" >Agachamento Livre</h5>
         <p class="card-text ficha text-white" style="font-size:16px"><strong>SÉRIE: 4 X 20</strong></p>
@@ -279,6 +274,17 @@
   
 
 </div>
+
+<!-- Large modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large modal</button>
+
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      ...
+    </div>
+  </div>
+</div>
 <br><br><br><br>
 <footer>
     <nav class="nav nav-pills nav-fill colormenu fixed-bottom" >
@@ -288,6 +294,22 @@
 </nav>
   </footer>
 
+
+  
+
+
+ <script type="text/javascript">
+    $(document).ready(function() {
+      $('successtreino').submit() {
+        alert('Mais um pra conta!');
+      }
+    });
+    $('#suss').click() {
+      $('#idfinaliza').submit();
+    }
+  </script>
+
+  </main>
 
   <!-- Extra large modal -->
 
@@ -341,25 +363,10 @@
   </div>
 </div>
 
-
-
- <script type="text/javascript">
-    $(document).ready(function() {
-      $('successtreino').submit() {
-        alert('Mais um pra conta!');
-      }
-    });
-    $('#suss').click() {
-      $('#idfinaliza').submit();
-    }
-  </script>
-
-  </main>
-</body>
-         <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
     <script src="node_modules/popper.js/dist/popper.js"></script>
-    <script src="node_modules/bootstrap/dist/bootstrap.js"></script>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-    </body>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
 </html>

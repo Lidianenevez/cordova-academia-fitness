@@ -38,19 +38,19 @@ main{
 
 h2{
 
-  font-family: 'Roboto', sans-serif;
+  font-family: Roboto, sans-serif;
   color: #343434;
   font-size: 30px;
 }
 h3{
 
-  font-family: 'Roboto', sans-serif;
+  font-family: Roboto, sans-serif;
   color: #343434;
   font-size: 25px;
 }
 h4{
 
-  font-family: 'Roboto', sans-serif;
+  font-family: Roboto, sans-serif;
   color: #343434;
   font-size: 20px;
 }
@@ -61,13 +61,31 @@ h4{
 }
 
 label{
-  font-family: 'Roboto', Black;
+  font-family: Roboto, Black;
   color: #343434;
   font-size: 16px
 }
+.required:after {
+  content:" *"; 
+  color: red;
+  font-size: 18px;
 
+}
+.scroll{
+  height: 400px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.scrolltreino{
+  height: 200px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.altura{
+  height: 100vh;
+}
 .btnlogin{
-   font-family:IBM Plex Sans, Medium;
+   font-family:IBM Plex Sans;
   font-size: 18px;
   background-color: #B95922;
   color: #FFFFFF;
@@ -100,7 +118,7 @@ label{
 
 }
 .fontvigor{
-  font-family: 'Viga', sans-serif;
+  font-family: Viga, sans-serif;
   font-size: 30px;
   color: #343434;
 }
@@ -113,11 +131,13 @@ label{
   color: #363636;
   font-family: IBM Plex Sans, Bold;
   font-size: 18px;
+  font-weight: bold;
 }
 .fonttd{
   color: #363636;
   font-family: IBM Plex Sans, Bold;
   font-size: 16px;
+  font-weight: bold;
 }
 .playicon{
   color: #B95922;
@@ -167,7 +187,7 @@ label{
 
 /* PERFIL */
 .nomealuno{
-  font-family: 'Roboto', Black;
+  font-family: Roboto, Black;
   color: #343434;
   font-size: 16px
 } 
@@ -308,6 +328,16 @@ table>tbody>tr:hover{
 
 /* DESCRIÇÃO ACADEMIA */
 
+.textoapp{
+  font-size: 45px; 
+  color: #fff; 
+  font-family: SecularOne, sans-serif;
+  text-shadow: 0 0 5px #000; 
+  border-radius: 15px 50px; 
+  background-color: ;
+  border: 1px solid #B95922;
+}
+
 .textacademia{
   color: #B95922;
   font-family: Cooper, Black;
@@ -362,13 +392,13 @@ table>tbody>tr:hover{
   color: #343434;
 }
 .valorplanos{
-   font-family: 'Roboto', Black;
+   font-family: Roboto, Black;
   color: #343434;
   font-size: 16px
 
 }
 .valorplanos1{
-   font-family: 'Roboto', Black;
+   font-family: Roboto, Black;
   color: #fff;
   font-size: 18px
 
@@ -396,7 +426,7 @@ table>tbody>tr:hover{
 /* PLANO */
 
 .planosh2{
-  font-family: 'Roboto', Black;
+  font-family: Roboto, Black;
   color: #343434;
   font-size: 30px;
   letter-spacing: 3px
@@ -419,7 +449,7 @@ table>tbody>tr:hover{
 
 }
 .pfooter{
-  font-family: 'Roboto', Black;
+  font-family: Roboto, Black;
   font-size: 20px;
   color: #FFFFFF; 
 }
@@ -455,7 +485,7 @@ transition-delay:.2s;
 }
 
 .smoothscroll-top:hover {
-background-color:#3877d4;
+background-color: #060A4B;
 color:#fff;
 transition:all .2s ease-in-out;
 transition-delay:0;
@@ -483,8 +513,8 @@ line-height:inherit;
     url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
     url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
     url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
-}
 
+}
 
 
 .glyph{
@@ -515,7 +545,7 @@ line-height:inherit;
     }
     .login-form h2 {
         margin: 0 0 15px;
-       font-family: 'Roboto', Black;
+       font-family: Roboto, Black;
     }
     .form-control, .btn {
         min-height: 38px;
@@ -528,6 +558,25 @@ line-height:inherit;
         font-size: 15px;
         font-weight: bold;
     }
+.form-group {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.form-control-placeholder {
+  position: absolute;
+  top: 0;
+  padding: 7px 0 0 40px;
+  transition: all 200ms;
+  opacity: 0.5;
+}
+
+.form-control:focus + .form-control-placeholder,
+.form-control:valid + .form-control-placeholder {
+  font-size: 75%;
+  transform: translate3d(0, -100%, 0);
+  opacity: 1;
+}
 
 
 
@@ -548,6 +597,12 @@ line-height:inherit;
   .foto, .botoes {
     margin-left: 65px !important;
     }
+    .textoapp{
+      font-size: 40px !important;
+    }
+     .contperfil{
+        max-width: 100%;
+      }
   }
 
   @media (max-width: 991px) and (min-width: 573px) {
@@ -557,17 +612,17 @@ line-height:inherit;
        .fotosins, .botoesins {
         margin-left: 80px !important;
       }
+
     }
-  }
   
-    @media (min-width: 240px) {
-  table, .tableficha{
-    margin-left:15px !important;
-    margin-right: 15px !important;
+    @media (max-width: 500px) {
+
+  .textoapp{
+      font-size: 40px ;
+      padding: 3px;
     }
-    .musculo{
-      margin-top: 
-    }
-    .table-sm td, .table-sm th {
-    padding: .1rem !important;
+  .imgdono{
+    margin-right: 80px;
+    margin-left: 80px
   }
+}

@@ -28,22 +28,17 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+         <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
         <link rel="stylesheet" href="node_modules/bootstrap/compiler/bootstrap.css">
         <link rel="stylesheet" type="text/css" href="css/index.css">
-        <link rel="stylesheet" type="text/css" href="css/estilo.css">
         <link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="/css/estilo.css">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet ">
-        <link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,500,600,700" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Viga" rel="stylesheet">
-        <title>Hello World</title>
+        <title>Academia Fitness</title>
     </head>
-    <body>
+    <body style="background-color: #fff;">
 
 <main>
 <header >
@@ -70,7 +65,7 @@
   <div class="row">
     <div class="col-md-4 text-center"><br>
         <img src="/img/usuario.png" alt="foto de aluno" class="rounded-circle fotoaluno img-fluid" style="margin:  5px"><br>
-      <button type="button" class="btn " data-toggle="modal" data-target=".adcfoto" style="margin-top: 5px; background-color: ; border: 1px solid #; border-radius: 15%"> <img src="/img/photo-camera.svg" alt="foto de aluno" class=" img-fluid" width="25" height="25" style=""></button><br><br>
+      <button type="button" class="btn " data-toggle="modal" data-target=".adcfoto" style="margin-top: 5px; background-color: #fff ; border: 1px solid #; border-radius: 15%"> <img src="/img/photo-camera.svg" alt="foto de aluno" class=" img-fluid" width="25" height="25" style=""></button><br><br>
 
     </div>
     <div class="col-md-8">
@@ -102,7 +97,7 @@
     </div>
 </div>
 </div>
-<!-- modal de adcionar foto -->
+
 <br><br><br>
 <footer>
     <nav class="nav nav-pills nav-fill colormenu fixed-bottom" >
@@ -111,13 +106,36 @@
     <a class="nav-item nav-link link-nav" href="historico.html"><i class="fa fa-history" aria-hidden="true" style="color: #F1F1F1"></i></a>
 </nav>
   </footer>
+<!-- modal de adcionar foto -->
+
+  <div class="modal fade adcfoto" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="container">
+        <button type="button" class="close text-right" data-dismiss="modal" aria-label="Close" style="font-size: 30px;">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      <form method="POST" action="/upload-imagem" enctype="multipart/form-data">
+  
+      <label for="exampleFormControlFile1" style="margin-top: 10px">Escolha uma foto!</label>
+      <input type="file" class="form-control-file" id="exampleFormControlFile1" name="imagem" style=" border: 1px solid #ced4da; border-radius: 2px;">
+
+  
+  <div class="form-group text-right">
+    <button type="submit" class="btn btnlaranja" style="margin: 5px">Enviar</button>
+  </div>
+</form>
+</div>
+    </div>
+  </div>
+</div>
+
 
   </main>
-</body>
-         <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
     <script src="node_modules/popper.js/dist/popper.js"></script>
-    <script src="node_modules/bootstrap/dist/bootstrap.js"></script>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-    </body>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
 </html>

@@ -28,20 +28,15 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+         <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
         <link rel="stylesheet" href="node_modules/bootstrap/compiler/bootstrap.css">
         <link rel="stylesheet" type="text/css" href="css/index.css">
-        <link rel="stylesheet" type="text/css" href="css/estilo.css">
         <link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="/css/estilo.css">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet ">
-        <link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,500,600,700" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Viga" rel="stylesheet">
-        <title>Hello World</title>
+        <title>Academia Fitness</title>
     </head>
     <body style="background-color: #fff;">
          
@@ -58,7 +53,7 @@
         <h2 class="text-center" >ENTRAR</h2> 
         <div class="form-group">
           <div class="input-group">
-            <label for="cpf"></label>
+            <label class="form-control-placeholder" for="password">CPF</label>
                 <span class="input-group-addon"  style="border: 1px solid #ccc; padding: 4px;"><i class="fa fa-user playicon text-center" aria-hidden="true" style="font-size: 25px;"></i></span>
                 <input id="email" type="text" class="form-control" placeholder="CPF" required autofocus style="">
 
@@ -71,7 +66,7 @@
         </div>
     <div class="form-group">
             <div class="input-group">
-              <label for="senha"></label>
+              <label class="form-control-placeholder" for="password">SENHA</label>
                 <span class="input-group-addon" style="border: 1px solid #ccc; padding: 3px;"><i class="fa fa-key playicon text-center" aria-hidden="true" style="font-size: 20px"></i></span>
                 <input id="password" type="password" class="form-control" name="password" required placeholder="senha" >
 
@@ -106,10 +101,11 @@
 
     </main>
     
-         <script src="node_modules/jquery/dist/jquery.js"></script>
+
+    <script src="node_modules/jquery/dist/jquery.js"></script>
     <script src="node_modules/popper.js/dist/popper.js"></script>
-    <script src="node_modules/bootstrap/dist/bootstrap.js"></script>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-    </body>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
 </html>
