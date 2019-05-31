@@ -166,6 +166,15 @@ label{
 }
 /* MENU #242B8C*/
 
+.menubox {
+  margin-bottom: 15px;
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.3);
+}
+.menuboxf {
+  margin-top: 15px;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3);
+}
+
 .colormenu{
   background-color: #060A4B;
   
