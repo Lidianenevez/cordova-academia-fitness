@@ -41,66 +41,47 @@
     <body style="background-color: #fff;">
          
     <main>
-        <div style="background: url(../img/bap.jpg); background-repeat: no-repeat; background-size: contain; background-size: 100% 100%; background-color:  ">
-  <div class="container">
+<br><br>
+<div class="container">
     <br><br>
        <div class="text-center"><a href="/"><img src="../img/logo.png" class="img-fluid " alt="logo academia fitness" style="max-width: 200px; margin-bottom: -50px"></a></div>
   <div class="row "  >
     <div class="col-12">
-  <div class="login-form " >
-    <form method="POST" action="/login" class="">
-     
-        <h2 class="text-center" style="text-transform: uppercase;" >ENTRAR</h2> 
-        <div class="form-group">
-            <label for="password" class="text-left">CPF</label>
-          <div class="input-group">
-            
-                <span class="input-group-addon"  style="border: 1px solid #ccc; padding: 4px;"><i class="fa fa-user playicon text-center" aria-hidden="true" style="font-size: 25px;"></i></span>
-                <input id="cpf" type="text" class="form-control" placeholder="cpf"  required autofocus style="">
-
+        <div class="login-form "  >
+            <form method="POST" action="" style="border-radius: 50px;">
               
-                  <span class="invalid-feedback" role="alert">
-                      <strong></strong>
-                  </span>
-            
-            </div>
+                <h2 class="text-center">Crie sua nova senha</h2> 
+                <div class="form-group">
+                     <label for="password" class="required">Senha</label>
+                  <div class="input-group">
+                        <input id="password" type="password" class="form-control" name="password" placeholder="nova senha" required autofocus style="border-radius: 50px;">
+
+                      
+                          
+                        <span class="invalid-feedback" role="alert">
+                            <strong></strong>
+                        </span>
+                   
+
+                    </div>
+                    <span ><p class="text-right " style="color: #000; font-family: IBM Plex Sans, Regular; font-size: 14px;">mínimo 6 caracteres</p></span>
+                </div>
+                <div class="form-group" style="margin-top: -15px">
+                    <label for="password-confirm" class="required">Confirmar Senha</label>
+                    <div class="input-group">
+                        <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="nova senha" required style="border-radius: 50px;">
+                    </div>
+                </div>        
+                <div class="form-group">
+                    <button type="submit" class="btn btnlaranja btn-block" style="border-radius: 50px;">CRIAR</button>
+                </div>  
+            </form>
         </div>
-    <div class="form-group">
-        <label class="" for="password">Senha</label>
-            <div class="input-group">
-                <span class="input-group-addon" style="border: 1px solid #ccc; padding: 3px;"><i class="fa fa-key playicon text-center" aria-hidden="true" style="font-size: 20px"></i></span>
-                <input id="password" type="password" class="form-control" name="password" required placeholder="senha" >
-
-              
-                  <span class="invalid-feedback" role="alert">
-                      <strong></strong>
-                  </span>
-         
-            </div>
-        </div>        
-        <div class="form-group">
-            <button type="submit" class="btn btnlaranja btn-block">ENTRAR</button>
-        </div>
-        <div class="clearfix">
-            
-             
-                                    <a class="pull-right " href="{{ route('password.request') }}">
-                                        Esqueceu a senha?
-                                    </a>
-                              
-        </div>        
-    </form>
-    <p class="text-center small fontmodalidades" style="font-size: 16px; color: ">Não possui um usuário? Procure a academia e matricule-se!</p>
-</div>
 
 </div>
 </div>
 </div>
-</div>
-
-   
-
-    </main>
+</main>
     
 
     <script src="node_modules/jquery/dist/jquery.js"></script>

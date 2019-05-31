@@ -1,3 +1,7 @@
+* {
+  text-transform: none;
+}
+
 @font-face{
    font-family: Roboto;
  src: url(/fonts/Roboto/Roboto-Black.ttf);
@@ -89,12 +93,14 @@ label{
   font-size: 18px;
   background-color: #B95922;
   color: #FFFFFF;
+  text-transform: uppercase;
 }
 
 .btnlaranja{
   background-color: #B95922;
   color: #F1F1F1;
   font-family: IBM Plex Sans, Regular; 
+  text-transform: uppercase;
 }
 .btnlaranja:hover{
   background-color: #525CE0E6;
@@ -109,6 +115,9 @@ label{
 .btnazul:hover{
   background-color: #525CE0E6;
   color: #fff;
+}
+.colorazul{
+  color: #060A4B;
 }
 .adcionar{
   width: 50px;
