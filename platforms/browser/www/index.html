@@ -53,7 +53,7 @@
     <div class="col-12">
   <div class="login-form text-center" >
  <a href="/"><img src="../img/logo.png" class="img-fluid" alt="logo academia fitness" style="max-width: 50%"></a>
-    <form method="POST" action="/login" class="text-center">
+    <form class="text-center" id="form-login" >
      
         <h2 class="text-center" >ENTRAR</h2> 
         <div class="form-group">
@@ -106,10 +106,29 @@
 
     </main>
     
-         <script src="node_modules/jquery/dist/jquery.js"></script>
-    <script src="node_modules/popper.js/dist/popper.js"></script>
-    <script src="node_modules/bootstrap/dist/bootstrap.js"></script>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-    </body>
+</body>
+
+<script src="node_modules/jquery/dist/jquery.js"></script>
+<script src="node_modules/popper.js/dist/popper.js"></script>
+<script src="node_modules/bootstrap/dist/bootstrap.js"></script>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript">
+
+alert('minha rola');
+console.log('oi');
+
+$.(document).ready(function() {
+    alert('minha rola');    
+    $('#form-login').submit(function(event) {
+        event.preventDefault();
+
+        alert('login');
+    });
+});
+
+</script>
+
 </html>
