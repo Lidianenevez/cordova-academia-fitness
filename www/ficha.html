@@ -75,11 +75,16 @@
                 <option value="6">F</option>
               </select>
            </div>
-           <center>
-           <div class="col-auto mx-sm-3">
-          <button class="btn btnlaranja mb-6  " type="submit" style="min-width: 100px">SIM <i class="fa fa-check-circle" aria-hidden="true"></i></button> 
-          <button class="btn btnlaranja mb-6 ">CANCELAR <i class="fa fa-times" aria-hidden="true"></i></button>
-          </center>
+           <table class="table table-sm" style="border: none;">
+             <tr>
+               <th scope="col">
+                  <button class="btn btnlaranja mb-6 btn-block " type="submit" style="max-width: 121px">SIM <i class="fa fa-check-circle" aria-hidden="true"></i></button> 
+               </th>
+               <th scope="col">
+                 <button class="btn btnlaranja mb-6 btn-block" style="max-width: 121px">CANCELAR <i class="fa fa-times" aria-hidden="true"></i></button>
+               </th>
+             </tr>
+           </table>
         </form>
         
           </div>
@@ -243,7 +248,7 @@
     </tr>
   </tbody>
 </table>
-  <button class="btn btnlaranja" type="button" data-toggle="modal" data-target="#modal-alert" id="suss">CONCLUIR TREINO <i class="fa fa-check-circle" aria-hidden="true"></i></button><br><br>
+  <button class="btn btnlaranja btn-block" type="button" data-toggle="modal" data-target="#modal-alert" id="suss">CONCLUIR TREINO <i class="fa fa-check-circle" aria-hidden="true"></i></button><br><br>
 </div>
 </div>
 </div>
@@ -273,10 +278,12 @@
 
 <br><br><br><br>
 <footer>
-    <nav class="nav nav-pills nav-fill colormenu fixed-bottom menuboxf" >
-  <a class="nav-item nav-link link-nav" href="perfil.html" ><i class="fa fa-user-o "style="color: #F1F1F1" aria-hidden="true" ></i></a>
-  <a class="nav-item nav-link link-nav" href="ficha.html"><i class="fa fa-file-text-o" style="color: #F1F1F1" aria-hidden="true"></i></a>
-    <a class="nav-item nav-link link-nav" href="historico.html"><i class="fa fa-history" aria-hidden="true" style="color: #F1F1F1"></i></a>
+    <nav class="nav nav-pills nav-fill fixed-bottom menuboxf colormenu" style="background-color:  ;" >
+  <a class="nav-item nav-link link-nav" href="perfil.html" ><img src="../img/user.png" class="menufooter"></a>
+
+  <a class="nav-item nav-link link-nav" href="ficha.html" ><img src="../img/clipboard.png" class="menufooter" ></a>
+
+    <a class="nav-item nav-link link-nav" href="historico.html" ><img src="../img/clock.png" class="menufooter"></a>
 </nav>
   </footer>
 
