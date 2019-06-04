@@ -44,3 +44,20 @@ var app = {
 };
 
 app.initialize();
+
+$('#form-login').on('submit', function(event) {
+    event.preventDefault();
+    console.log('funcionou');
+    
+    $.ajax({
+        type: 'post',
+        url: 'localhost:8000/api/login',
+        data: {
+            cpf: $('#cpf').val(),
+            password: $('#password').val(),
+        }
+    })
+    .done(function(msg) {
+        console.log(msg);
+    });
+});

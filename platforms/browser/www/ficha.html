@@ -28,25 +28,21 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+         <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
         <link rel="stylesheet" href="node_modules/bootstrap/compiler/bootstrap.css">
         <link rel="stylesheet" type="text/css" href="css/index.css">
-        <link rel="stylesheet" type="text/css" href="css/estilo.css">
         <link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="/css/estilo.css">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet ">
-        <link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,500,600,700" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Viga" rel="stylesheet">
-        <title>Hello World</title>
+        <title>Academia Fitness</title>
     </head>
-    <body>
+    <body style="background-color: #fff;">
 <main>
 <header >
-    <nav class="navbar navbar-light colormenu" style="padding: .1rem">
+    <nav class="navbar navbar-light colormenu menubox" style="padding: .1rem;  
+       ">
     <a class="navbar-brand" href="/"><img src="../img/logo.png" style="max-width:200px; max-height: 50px"></a>
   <a class="navbar-brand" href="#">
     <a href="#" class="btn btnlaranja" style="color: #F1F1F1; border-radius: 20px; ">Sair <i class="fa fa-share-square-o" aria-hidden="true"></i></a>
@@ -55,6 +51,7 @@
   </header>
 
 <br>
+<section>
 <div class="container">
         <div class="section-header">
           <h2 class="text-center">MINHA FICHA</h2>
@@ -63,7 +60,7 @@
         <h2>Treino de Hoje: <i class="fa fa-hand-o-right playicon" aria-hidden="true" ></i> B</h2>
       </div>
 
-<div class="container justify-content-center ">
+<div class="container justify-content-center  ">
     <div class="row">
       <div class="col-12 col-sm-6">
         <form class="form-inline">
@@ -79,42 +76,40 @@
                 <option value="6">F</option>
               </select>
            </div>
-           <div class="col-auto">
-          <button class="btn btnlaranja mb-2" type="submit" style="min-width: 78px">SIM <i class="fa fa-check-circle" aria-hidden="true"></i></button>   
+           <div class="container ">
+           <table class="table table-sm" style="border: none;">
+             <tr>
+               <th scope="col">
+                  <button class="btn btnlaranja mb-6 btn-block " type="submit" style="max-width: 121px">SIM <i class="fa fa-check-circle" aria-hidden="true"></i></button> 
+               </th>
+               <th scope="col">
+                 <button class="btn btnlaranja mb-6 btn-block" style="max-width: 121px">CANCELAR <i class="fa fa-times" aria-hidden="true"></i></button>
+               </th>
+             </tr>
+           </table>
+           </div>
         </form>
-        <a href="" class="btn btnlaranja mb-2 ">CANCELAR <i class="fa fa-times" aria-hidden="true"></i></a>
+        
           </div>
         </div>
+    </section>
+    <section>
         <div class="col-12 col-sm-6 text-center">
               <p class="nomealuno" style="font-size: 20px">Sequência de treinos: </p>
            <p class="">
       
-              <span class="fontvigor" style="font-size: 25px"> A  <i class="fa fa-hand-o-right playicon" aria-hidden="true"></i> B
-             
+              <span class="fontvigor" style="font-size: 25px"> A  <i class="fa fa-hand-o-right playicon" aria-hidden="true"></i> B <i class="fa fa-hand-o-right playicon" aria-hidden="true"></i> C             
              e repete!</span>
           </p>
         </div>
         </div>
       </div>
+    </section>
+    <section>
 <div class="container justify-content-center ">
     <div class="row">
       <div class="col-12 col-sm-6">
         <div class="table-responsive">
-          <table class="table table-sm text-center table-bordered">
-  <thead>
-    <tr class="colormenu">
-      <th scope="col" class="ficha text-white">Data de Revisão</th>
-      <th scope="col" class="ficha text-white">Data de Criação</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td scope="row" class="ficha" > <i class="fa fa-calendar playicon" aria-hidden="true"></i> </td>
-      <td class="ficha"> <i class="fa fa-calendar playicon" aria-hidden="true"></i></td>
-      
-    </tr>
-  </tbody>
-</table>
 <table class="table table-sm text-center table-bordered " >
   <thead>
     <tr class="colormenu">
@@ -124,8 +119,8 @@
   </thead>
   <tbody>
     <tr>
-      <td scope="row" class="ficha" >  </td>
-      <td class="ficha"></td>
+      <td scope="row" class="ficha" >Hipertrofia </td>
+      <td class="ficha">Isometria</td>
     </tr>
   </tbody>
 </table>
@@ -145,8 +140,8 @@
   </thead>
   <tbody>
     <tr>
-      <td scope="row" class="ficha" >  </td>
-      <td class="ficha"> minutos <i class="fa fa-clock-o playicon" aria-hidden="true"></i></td>
+      <td scope="row" class="ficha" >Estéira  </td>
+      <td class="ficha"> 10 minutos <i class="fa fa-clock-o playicon" aria-hidden="true"></i></td>
     </tr>
   </tbody>
 </table>
@@ -160,8 +155,8 @@
   </thead>
   <tbody>
     <tr>
-      <td scope="row" class="ficha" > minutos <i class="fa fa-clock-o playicon" aria-hidden="true "></i></td>
-      <td class="ficha"> segundos <i class="fa fa-clock-o playicon" aria-hidden="true"></i></td>
+      <td scope="row" class="ficha" >10 minutos <i class="fa fa-clock-o playicon" aria-hidden="true "></i></td>
+      <td class="ficha"> 30 segundos <i class="fa fa-clock-o playicon" aria-hidden="true"></i></td>
       
     </tr>
   </tbody>
@@ -172,91 +167,91 @@
 </div>
 </div>
 
-
+</section>
+<section>
 <div class="container">
-<div class="card mb-3 text-white colormenu" style="max-width: 540px; border-radius: 20px; border:none;">
+<div class="card mb-3  " style="max-width: 510px; border-radius: 20px; border: 2px solid #060A4B">
   <div class="row">
     <div class="col-4 text-center">
+      <center>
        <button type="button" class="btn" data-toggle="modal" data-target=".bd-example-modal-xl" style="border-radius: 20%; background-color: #fff0; border: none">
-                <img src="../img/play.svg" style="max-width: 90px; margin-top:15px;">
+                <img src="../img/play.svg" style="max-width: 70px; margin-top:20px; margin-left: 20px">
                 
-              </button>
-              <div class="custom-control custom-switch">
+              </button>  
+          </center>
+              <div class="custom-control custom-switch" style="margin-top: 10px; padding-left: 3.25rem;">
   <input type="checkbox" class="custom-control-input" id="customSwitch1">
   <label class="custom-control-label" for="customSwitch1"></label>
 </div>
     </div>
     <div class="col-8">
-      <div class="card-body">
+      <div class="card-body text-center" style="margin-right: 20px">
         
-        <h5 class="card-title text-left ficha text-white" >Agachamento Livre</h5>
-        <p class="card-text ficha text-white" style="font-size:16px"><strong>SÉRIE: 4 X 20</strong></p>
-        <p class="card-text ficha text-white" style="font-size:16px"><strong>PESO: 40kg</strong> </p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="card mb-3 text-white colormenu" style="max-width: 540px; border-radius: 20px; border:none;">
-  <div class="row">
-    <div class="col-4 text-center">
-       <button type="button" class="btn" data-toggle="modal" data-target=".bd-example-modal-xl" style="border-radius: 20%; background-color: #fff0; border: none">
-                <img src="../img/play.svg" style="max-width: 90px; margin-top:15px;">
-                
-              </button>
-              <div class="custom-control custom-switch">
-  <input type="checkbox" class="custom-control-input" id="customSwitch1">
-  <label class="custom-control-label" for="customSwitch1"></label>
-</div>
-    </div>
-    <div class="col-8">
-      <div class="card-body">
-        
-        <h5 class="card-title text-left ficha text-white" ><strong>Agachamento Livre</strong></h5>
-        <p class="card-text ficha text-white" style="font-size:14px"><strong>SÉRIE: 4 X 20</strong></p>
-        <p class="card-text ficha text-white" style="font-size:14px"><strong>PESO: 40kg</strong> </p>
+         <h5 class="card-title ficha " ><strong>Agachamento Livre</strong></h5>
+        <p class="card-text ficha " style="font-size:16px"><strong>Série: 4 X 20</strong> <img src="../img/repeat.png" class="img-fluid" style="max-width: 25px"> </p>
+        <p class="card-text ficha " style="font-size:16px"><strong>Peso: 40kg </strong> <img src="../img/barbell1.png" class="img-fluid" style="max-width: 25px">  </p>
       </div>
     </div>
   </div>
 </div>
 
 
-
-
 </div>
-
-
-     
-
-    
+</section>
+<section>
  <div class="container" >
 <div class="row " >
       <div class="col-12 col-sm-12 ">
         <div class=" " style="min-width: -50em">
-  <table class="table table-sm table-bordered" >
+  <table class="table table-sm table-bordered text-center" >
   <tfoot class="fonttd">
     <tr>
-      <th scope="col" colspan="3">
+      <th scope="col">
         Instrutor: <img src="../img/usuario.png" alt="..." class="rounded-circle" style="width: 30px; height: 30px"> 
-  <span><a class="btn btnlaranja " data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-    Observações
-  </a></span>
-  <div class="collapse" id="collapseExample">
-  <div class="card card-body">
-    
-  </div>
-    </div>
-   </div>
-      </th scope="col">
-    </tr>
-    
-  </tfoot>
-</table>
-  <button class="btn btnlaranja" type="button" data-toggle="modal" data-target="#modal-alert" id="suss">CONCLUIR TREINO <i class="fa fa-check-circle" aria-hidden="true"></i></button><br><br>
+        <th>
+          <span><a class="btn btnlaranja " data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+             Observações</a></span>
+        </th>
+          <div class="collapse" id="collapseExample">
+          <div class="card card-body">
+          </div>
+          <div>
+          </div>
+              </th scope="col">
+            </tr>
+            
+          </tfoot>
+          <tbody>
+            <tr>
+              <th scope="col" class="ficha ">Data de Criação</th>
+              <th scope="col" class="ficha ">Data de Revisão</th>
+            </tr>
+           <tr>
+              <td scope="row" class="ficha" >20/05/2019 <i class="fa fa-calendar playicon" aria-hidden="true"></i>
+              </td>
+              <td class="ficha">20/06/2019 <i class="fa fa-calendar playicon" aria-hidden="true"></i>
+              </td>
+          </tr>
+         </tbody>
+       </table>
+         <button class="btn btnlaranja btn-block" type="button" data-toggle="modal" data-target="#modal-alert" id="       suss">CONCLUIR TREINO <i class="fa fa-check-circle" aria-hidden="true"></i></button><br><br>
+       </div>
 </div>
 </div>
 </div>
-</div>
+</section>
+<br><br><br>
+<footer>
+    <nav class="nav nav-pills nav-fill fixed-bottom menuboxf colormenu" style="background-color:  ;" >
+  <a class="nav-item nav-link link-nav" href="perfil.html" ><img src="../img/user.png" class="menufooter"></a>
+
+  <a class="nav-item nav-link link-nav" href="ficha.html" ><img src="../img/clipboard.png" class="menufooter" ></a>
+
+    <a class="nav-item nav-link link-nav" href="historico.html" ><img src="../img/clock.png" class="menufooter"></a>
+</nav>
+  </footer>
+
+<!-- Modal de mais um pra conta -->
 
 <div class="modal fade" id="modal-alert">
   <div class="modal-dialog">
@@ -279,17 +274,27 @@
   
 
 </div>
-<br><br><br><br>
-<footer>
-    <nav class="nav nav-pills nav-fill colormenu fixed-bottom" >
-  <a class="nav-item nav-link link-nav" href="perfil.html" ><i class="fa fa-user-o "style="color: #F1F1F1" aria-hidden="true" ></i></a>
-  <a class="nav-item nav-link link-nav" href="ficha.html"><i class="fa fa-file-text-o" style="color: #F1F1F1" aria-hidden="true"></i></a>
-    <a class="nav-item nav-link link-nav" href="historico.html"><i class="fa fa-file-text-o" style="color: #F1F1F1" aria-hidden="true"></i></a>
-</nav>
-  </footer>
 
 
-  <!-- Extra large modal -->
+
+
+  
+
+
+ <script type="text/javascript">
+    $(document).ready(function() {
+      $('successtreino').submit() {
+        alert('Mais um pra conta!');
+      }
+    });
+    $('#suss').click() {
+      $('#idfinaliza').submit();
+    }
+  </script>
+
+  </main>
+
+<!-- Modal de demostrativo de exercicio -->
 
 
 <div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
@@ -329,7 +334,7 @@
         <hr style="border-top:1px solid  #B95922">
         <div>
           <h3>DESCRIÇÃO</h3>
-          <p class="descplanos">O agachamento é um exercício voltado para a área superior das pernas, trabalhando os quadríceps e glúteos com maior ênfase, e com menor ênfase a área interna das pernas.</p>
+          <p class="descplanos text-justify" >O agachamento é um exercício voltado para a área superior das pernas, trabalhando os quadríceps e glúteos com maior ênfase, e com menor ênfase a área interna das pernas.</p>
         </div>
       </div>
       <div class="modal-footer">
@@ -341,25 +346,11 @@
   </div>
 </div>
 
-
-
- <script type="text/javascript">
-    $(document).ready(function() {
-      $('successtreino').submit() {
-        alert('Mais um pra conta!');
-      }
-    });
-    $('#suss').click() {
-      $('#idfinaliza').submit();
-    }
-  </script>
-
-  </main>
-</body>
-         <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
     <script src="node_modules/popper.js/dist/popper.js"></script>
-    <script src="node_modules/bootstrap/dist/bootstrap.js"></script>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-    </body>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/efeito.js"></script>
+</body>
 </html>
