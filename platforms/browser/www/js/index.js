@@ -47,16 +47,25 @@ app.initialize();
 
 $('#form-login').on('submit', function(event) {
     event.preventDefault();
-    console.log('funcionou');
     
     $.ajax({
-        url: 'localhost:8000/api/login',
+        type: 'POST',
+        url: 'http://127.0.0.1:8000/api/login',
         data: {
             cpf: $('#cpf').val(),
             password: $('#password').val(),
+        },
+        success: function(response) {
+            console.log('funcionou essa merda');
+            console.log($('#cpf').val());
+            console.log($('#password').val());
+            console.log(response);
+        },
+        error: function(erro) {
+            console.log('esse caralho não tá funcionadno');
+            console.log($('#cpf').val());
+            console.log($('#password').val());
+            console.log(erro);
         }
-    })
-    .done(function(msg) {
-        console.log(msg);
     });
 });
