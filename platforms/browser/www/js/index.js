@@ -57,9 +57,10 @@ $('#form-login').on('submit', function(event) {
         },
         success: function(response) {
             console.log('funcionou essa merda');
-            console.log($('#cpf').val());
-            console.log($('#password').val());
-            console.log(response);
+            // console.log(response.success.token);
+            window.localStorage.setItem('token', response.success.token);
+            console.log(window.localStorage.getItem('token'));
+            window.location.href = "/ficha.html";
         },
         error: function(erro) {
             console.log('esse caralho não tá funcionadno');
