@@ -28,7 +28,7 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"> -->
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
@@ -68,18 +68,7 @@
            <p class="">
           
            
-                 <ul class="fontvigor " style="font-size: 25px">
-                   
-                       <li style="list-style-type: none;"><i class="fa fa-arrow-down" aria-hidden="true"></i>C  <i class="fa fa-hand-o-right playicon" aria-hidden="true"></i> <span class="Nomeperfil">27/05/2019</span></li>
-                      <li style="list-style-type: none;"><i class="fa fa-arrow-down" aria-hidden="true"></i>B  <i class="fa fa-hand-o-right playicon" aria-hidden="true"></i> <span class="Nomeperfil">26/05/2019</span></li>
-                      <li style="list-style-type: none;"><i class="fa fa-arrow-down" aria-hidden="true"></i>A <i class="fa fa-hand-o-right playicon" aria-hidden="true"></i> <span class="Nomeperfil">25/05/2019</span></li>
-                      <li style="list-style-type: none;"><i class="fa fa-arrow-down" aria-hidden="true"></i>C  <i class="fa fa-hand-o-right playicon" aria-hidden="true"></i> <span class="Nomeperfil">24/05/2019</span></li>
-                      <li style="list-style-type: none;"><i class="fa fa-arrow-down" aria-hidden="true"></i>B  <i class="fa fa-hand-o-right playicon" aria-hidden="true"></i> <span class="Nomeperfil">23/05/2019</span></li>
-                      <li style="list-style-type: none;"><i class="fa fa-arrow-down" aria-hidden="true"></i>A <i class="fa fa-hand-o-right playicon" aria-hidden="true"></i> <span class="Nomeperfil">22/05/2019</span></li>
-
-                      
-                    
-                 </ul>
+                 <ul class="fontvigor " id="historico" style="font-size: 25px"></ul>
              
                  <!-- <p class="ficha">Ainda não foi realizado nenhum treino.</p> -->
              
@@ -107,5 +96,6 @@
     <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/historico.js"></script>
 </body>
 </html>
