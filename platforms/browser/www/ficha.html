@@ -28,7 +28,7 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-         <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+<!--          <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"> -->
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
@@ -119,8 +119,8 @@
   </thead>
   <tbody>
     <tr>
-      <td scope="row" class="ficha" >Hipertrofia </td>
-      <td class="ficha">Isometria</td>
+      <td scope="row" class="ficha"  id="objetivo"> </td>
+      <td class="ficha" id="metodo"></td>
     </tr>
   </tbody>
 </table>
@@ -140,8 +140,8 @@
   </thead>
   <tbody>
     <tr>
-      <td scope="row" class="ficha" >Estéira  </td>
-      <td class="ficha"> 10 minutos <i class="fa fa-clock-o playicon" aria-hidden="true"></i></td>
+      <td scope="row" class="ficha" id="aerobico">  </td>
+      <td class="ficha"><span id="tempo_aerobico"></span> minutos <i class="fa fa-clock-o playicon" aria-hidden="true"></i></td>
     </tr>
   </tbody>
 </table>
@@ -155,8 +155,8 @@
   </thead>
   <tbody>
     <tr>
-      <td scope="row" class="ficha" >10 minutos <i class="fa fa-clock-o playicon" aria-hidden="true "></i></td>
-      <td class="ficha"> 30 segundos <i class="fa fa-clock-o playicon" aria-hidden="true"></i></td>
+      <td scope="row" class="ficha" ><span id="aquecimento"></span> minutos <i class="fa fa-clock-o playicon" aria-hidden="true "></i></td>
+      <td class="ficha"> <span id="intervalo"></span> segundos <i class="fa fa-clock-o playicon" aria-hidden="true"></i></td>
       
     </tr>
   </tbody>
@@ -170,7 +170,10 @@
 </section>
 <section>
 <div class="container">
-<div class="card mb-3  " style="max-width: 510px; border-radius: 20px; border: 2px solid #060A4B">
+<div id="campo-exercicio">
+  
+</div>
+<!-- <div class="card mb-3 exercico" style="max-width: 510px; border-radius: 20px; border: 2px solid #060A4B">
   <div class="row">
     <div class="col-4 text-center">
       <center>
@@ -179,10 +182,10 @@
                 
               </button>  
           </center>
-              <div class="custom-control custom-switch" style="margin-top: 10px; padding-left: 3.25rem;">
-  <input type="checkbox" class="custom-control-input" id="customSwitch1">
-  <label class="custom-control-label" for="customSwitch1"></label>
-</div>
+      <div class="custom-control custom-switch" style="margin-top: 10px; padding-left: 3.25rem;">
+        <input type="checkbox" class="custom-control-input" id="customSwitch1">
+        <label class="custom-control-label" for="customSwitch1"></label>
+      </div>
     </div>
     <div class="col-8">
       <div class="card-body text-center" style="margin-right: 20px">
@@ -193,7 +196,7 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 
 </div>
@@ -213,8 +216,8 @@
              Observações</a></span>
         </th>
           <div class="collapse" id="collapseExample">
-          <div class="card card-body">
-          </div>
+            <div class="card card-body" id="observacoes">
+            </div>
           <div>
           </div>
               </th scope="col">
@@ -276,11 +279,7 @@
 </div>
 
 
-
-
-  
-
-
+<!-- 
  <script type="text/javascript">
     $(document).ready(function() {
       $('successtreino').submit() {
@@ -291,7 +290,7 @@
       $('#idfinaliza').submit();
     }
   </script>
-
+ -->
   </main>
 
 <!-- Modal de demostrativo de exercicio -->
@@ -352,5 +351,6 @@
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/efeito.js"></script>
+    <script type="text/javascript" src="js/ficha.js"></script>
 </body>
 </html>
