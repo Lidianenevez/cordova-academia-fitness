@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	getTreino();
 });
-$('#seleciona-treino').on('submit', function() {
+$('#seleciona-treino').on('submit', function(event) {
 	event.preventDefault();
 	getTreino($('#treino').val())
 });
@@ -17,7 +17,11 @@ function getTreino(treino = null) {
 	    	treino: treino
 	    },
         success: function(response) {
-        	$('#treino-hoje').text(response.treinoDeHoje);
+        	$('#sequencia').empty();
+        	$('#campo-exercicio').empty();
+        	$('#treino-de-hoje-id').val(response.treinoDeHoje.id);
+        	$('#ficha').val(response.ficha.id);
+        	$('#treino-hoje').text(response.treinoDeHoje.treino);
         	$('#instrutor').text(response.instrutor);
         	$('#objetivo').text(response.ficha.objetivo);
         	$('#criacao').text(response.ficha.created_at_formatado);
@@ -28,7 +32,6 @@ function getTreino(treino = null) {
         	$('#aquecimento').text(response.ficha.aquecimento);
         	$('#intervalo').text(response.ficha.intervalo);
         	$('#observacoes').text(response.ficha.observacoes);
-        	$('#campo-exercicio').empty();
         	$(response.treino).each(function(index, exercicio) {
 	            $('#campo-exercicio').append(
 					`<div class="card mb-3 exercicio" style="max-width: 510px; border-radius: 20px; border: 2px solid #060A4B">
@@ -107,7 +110,6 @@ function getTreino(treino = null) {
 					</div>`
 	            );
         	});
-        	$('#sequencia').empty();
         	$(response.sequencia).each(function(index, treino) {
         		$('#sequencia').append(
         			`${treino.treino}  <i class="fa fa-hand-o-right playicon" aria-hidden="true"></i>`
@@ -120,3 +122,34 @@ function getTreino(treino = null) {
         }
     });
 }
+
+$('#finaliza').on('submit', function(event) {
+	event.preventDefault();
+    $.ajax({
+        type: 'POST',
+        url: 'http://127.0.0.1:8000/api/ultimo-treino',
+	    headers: {
+	        'Authorization': 'Bearer ' + window.localStorage.getItem('token'),
+	    },
+	    data: {
+	    	treino: $('#treino-de-hoje-id').val(),
+	    	ficha: $('#ficha').val()
+	    },
+        success: function(respo11nse) {
+        	location.reload();
+        },
+        error: function(erro) {
+            console.log('esse caralho não tá funcionadno');
+            console.log(erro);
+        }
+    });
+})
+
+// $(document).ready(function() {
+//   $('successtreino').submit() {
+//     alert('Mais um pra conta!');
+//   }
+// });
+// $('#suss').click() {
+//   $('#idfinaliza').submit();
+// }
