@@ -130,7 +130,6 @@ $('#finaliza').on('submit', function(event) {
         url: 'http://127.0.0.1:8000/api/ultimo-treino',
 	    headers: {
 	        'Authorization': 'Bearer ' + window.localStorage.getItem('token'),
-	        'cors': true
 	    },
 	    data: {
 	    	treino: $('#treino-de-hoje-id').val(),
