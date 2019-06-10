@@ -17,6 +17,12 @@ function getTreino(treino = null) {
 	    	treino: treino
 	    },
         success: function(response) {
+
+        	if(response.novo_usuario == 1) {
+        		window.location.href = "/novasenha.html";
+        		return 0;
+        	}
+
         	$('#sequencia').empty();
         	$('#campo-exercicio').empty();
         	$('#treino-de-hoje-id').val(response.treinoDeHoje.id);
@@ -143,7 +149,7 @@ $('#finaliza').on('submit', function(event) {
             console.log(erro);
         }
     });
-})
+});
 
 // $(document).ready(function() {
 //   $('successtreino').submit() {

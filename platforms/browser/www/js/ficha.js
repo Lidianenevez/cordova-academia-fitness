@@ -17,6 +17,12 @@ function getTreino(treino = null) {
 	    	treino: treino
 	    },
         success: function(response) {
+
+        	if(response.novo_usuario == 1) {
+        		window.location.href = "/novasenha.html";
+        		return 0;
+        	}
+
         	$('#sequencia').empty();
         	$('#campo-exercicio').empty();
         	$('#treino-de-hoje-id').val(response.treinoDeHoje.id);
@@ -130,7 +136,6 @@ $('#finaliza').on('submit', function(event) {
         url: 'http://127.0.0.1:8000/api/ultimo-treino',
 	    headers: {
 	        'Authorization': 'Bearer ' + window.localStorage.getItem('token'),
-	        'cors': true
 	    },
 	    data: {
 	    	treino: $('#treino-de-hoje-id').val(),
@@ -144,7 +149,7 @@ $('#finaliza').on('submit', function(event) {
             console.log(erro);
         }
     });
-})
+});
 
 // $(document).ready(function() {
 //   $('successtreino').submit() {
