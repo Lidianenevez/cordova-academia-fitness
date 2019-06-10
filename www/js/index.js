@@ -63,10 +63,7 @@ $('#form-login').on('submit', function(event) {
             window.location.href = "/ficha.html";
         },
         error: function(erro) {
-            console.log('esse caralho não tá funcionadno');
-            console.log($('#cpf').val());
-            console.log($('#password').val());
-            console.log(erro);
+            $('#erro').text('CPF ou senha incorretos');
         }
     });
 });
