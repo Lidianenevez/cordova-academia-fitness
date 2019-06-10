@@ -44,3 +44,29 @@ var app = {
 };
 
 app.initialize();
+
+$('#form-login').on('submit', function(event) {
+    event.preventDefault();
+    
+    $.ajax({
+        type: 'POST',
+        url: 'http://127.0.0.1:8000/api/login',
+        data: {
+            cpf: $('#cpf').val(),
+            password: $('#password').val(),
+        },
+        success: function(response) {
+            console.log('funcionou essa merda');
+            // console.log(response.success.token);
+            window.localStorage.setItem('token', response.success.token);
+            console.log(window.localStorage.getItem('token'));
+            window.location.href = "/ficha.html";
+        },
+        error: function(erro) {
+            console.log('esse caralho não tá funcionadno');
+            console.log($('#cpf').val());
+            console.log($('#password').val());
+            console.log(erro);
+        }
+    });
+});

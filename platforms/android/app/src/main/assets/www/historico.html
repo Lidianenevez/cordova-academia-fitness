@@ -28,7 +28,7 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"> -->
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
@@ -66,30 +66,26 @@
            <div class=" ">
               <p class="nomealuno" style="font-size: 20px">Sequência Realizada </p>
            <p class="">
-        
-          <div class="scrolltreino">
           
            
-                 <ul class="fontvigor" style="font-size: 25px">
-                   
-                      <li style="list-style-type: none;"><i class="fa fa-arrow-down" aria-hidden="true"></i>B  <i class="fa fa-hand-o-right playicon" aria-hidden="true"></i> <span class="Nomeperfil">22/05/2019</span></li>
-                    
-                 </ul>
+                 <ul class="fontvigor " id="historico" style="font-size: 25px"></ul>
              
-                  <p class="ficha">Ainda não foi realizado nenhum treino.</p>
+                 <!-- <p class="ficha">Ainda não foi realizado nenhum treino.</p> -->
              
           </p>
-          </div>
+          
         </div>
         </div>
    
 <!-- modal de adcionar foto -->
 <br><br><br>
 <footer>
-    <nav class="nav nav-pills nav-fill colormenu fixed-bottom" >
-  <a class="nav-item nav-link link-nav" href="perfil.html" ><i class="fa fa-user-o "style="color: #F1F1F1" aria-hidden="true" ></i></a>
-  <a class="nav-item nav-link link-nav" href="ficha.html"><i class="fa fa-file-text-o" style="color: #F1F1F1" aria-hidden="true"></i></a>
-    <a class="nav-item nav-link link-nav" href="historico.html"><i class="fa fa-history" aria-hidden="true" style="color: #F1F1F1"></i></a>
+    <nav class="nav nav-pills nav-fill fixed-bottom menuboxf colormenu" style="background-color:  ;" >
+  <a class="nav-item nav-link link-nav" href="perfil.html" ><img src="../img/user.png" class="menufooter"></a>
+
+  <a class="nav-item nav-link link-nav" href="ficha.html" ><img src="../img/clipboard.png" class="menufooter" ></a>
+
+    <a class="nav-item nav-link link-nav" href="historico.html" ><img src="../img/clock.png" class="menufooter"></a>
 </nav>
   </footer>
 
@@ -100,5 +96,6 @@
     <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/historico.js"></script>
 </body>
 </html>

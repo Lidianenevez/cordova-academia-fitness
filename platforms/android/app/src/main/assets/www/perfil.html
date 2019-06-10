@@ -28,7 +28,7 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-         <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+<!--          <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"> -->
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
@@ -64,30 +64,29 @@
 <div class="card mb-3" style="max-width: 540px; background: #060a4b; border: none;">
   <div class="row">
     <div class="col-md-4 text-center"><br>
-        <img src="/img/usuario.png" alt="foto de aluno" class="rounded-circle fotoaluno img-fluid" style="margin:  5px"><br>
+        <img src="/img/usuario.png" id="foto-aluno" alt="foto de aluno" class="rounded-circle fotoaluno img-fluid" style="margin:  5px"><br>
       <button type="button" class="btn " data-toggle="modal" data-target=".adcfoto" style="margin-top: 5px; background-color: #fff ; border: 1px solid #; border-radius: 15%"> <img src="/img/photo-camera.svg" alt="foto de aluno" class=" img-fluid" width="25" height="25" style=""></button><br><br>
 
     </div>
     <div class="col-md-8">
-      <div class="card-body" style="">
-        <h5 class="card-title ficha text-white" style="font-size: 25px"><strong>Nome</strong></h5>
+      <div class="card-body " style="">
+        <h5 class="card-title ficha text-white" style="font-size: 25px"><strong>Nome: <span id="nome"></span></strong></h5>
         <div class="descriperfil text-white">
-                            <strong> Modalidade: </strong>modalidade
+                            <strong> Modalidade: </strong><span id="modalidade"></span>
                             
                         </div>
                          <div class="descriperfil text-white">
-                            <strong>Instrutor:</strong> instrutor->name
-                            
+                            <strong>Instrutor:</strong> <span id="instrutor"></span>
                         </div>
                          <div class="descriperfil text-white">
-                            <strong>Pagamento:</strong> Dia 10
+                            <strong>Pagamento:</strong> Dia <span id="pagamento"></span>
                           </div>
                          <div class="descriperfil text-white">
-                              <strong>Próxima Avaliação Física: 20/05/2019 </strong>
+                              <strong>Próxima Avaliação Física:</strong> <span id="proxima_avaliacao"></span> 
                         </div>
                         <br>
                         <div class="">
-                          <a href="" class="btn btnlaranja btn-sm">AVALIAÇÃO FÍSICA <i class="fa fa-line-chart" aria-hidden="true"  style="color: #F1F1F1"></i></a>
+                          <a id="avaliacao-aluno" href="" class="btn btnlaranja btn-sm">AVALIAÇÃO FÍSICA <i class="fa fa-line-chart" aria-hidden="true"  style="color: #F1F1F1"></i></a>
                         </div>
       </div>
     </div>
@@ -98,12 +97,14 @@
 </div>
 </div>
 
-<br><br><br>
+<br><br><br>border-radius
 <footer>
-    <nav class="nav nav-pills nav-fill colormenu fixed-bottom menuboxf" >
-  <a class="nav-item nav-link link-nav" href="perfil.html" ><i class="fa fa-user-o "style="color: #F1F1F1" aria-hidden="true" ></i></a>
-  <a class="nav-item nav-link link-nav" href="ficha.html"><i class="fa fa-file-text-o" style="color: #F1F1F1" aria-hidden="true"></i></a>
-    <a class="nav-item nav-link link-nav" href="historico.html"><i class="fa fa-history" aria-hidden="true" style="color: #F1F1F1"></i></a>
+    <nav class="nav nav-pills nav-fill fixed-bottom menuboxf colormenu" style="background-color:  ;" >
+  <a class="nav-item nav-link link-nav" href="perfil.html" ><img src="../img/user.png" class="menufooter"></a>
+
+  <a class="nav-item nav-link link-nav" href="ficha.html" ><img src="../img/clipboard.png" class="menufooter" ></a>
+
+    <a class="nav-item nav-link link-nav" href="historico.html" ><img src="../img/clock.png" class="menufooter"></a>
 </nav>
   </footer>
 <!-- modal de adcionar foto -->
@@ -115,16 +116,13 @@
         <button type="button" class="close text-right" data-dismiss="modal" aria-label="Close" style="font-size: 30px;">
           <span aria-hidden="true">&times;</span>
         </button>
-      <form method="POST" action="/upload-imagem" enctype="multipart/form-data">
-  
-      <label for="exampleFormControlFile1" style="margin-top: 10px">Escolha uma foto!</label>
-      <input type="file" class="form-control-file" id="exampleFormControlFile1" name="imagem" style=" border: 1px solid #ced4da; border-radius: 2px;">
-
-  
-  <div class="form-group text-right">
-    <button type="submit" class="btn btnlaranja" style="margin: 5px">Enviar</button>
-  </div>
-</form>
+        <form method="POST" id="form-imagem" enctype="multipart/form-data" action="http://127.0.0.1:8000/api/upload-imagem">
+          <label for="exampleFormControlFile1" style="margin-top: 10px">Escolha uma foto!</label>
+          <input id="imagem" type="file" class="form-control-file" id="exampleFormControlFile1" name="imagem" style=" border: 1px solid #ced4da; border-radius: 2px;">
+          <div class="form-group text-right">
+            <button type="submit" class="btn btnlaranja" style="margin: 5px">Enviar</button>
+          </div>
+        </form>
 </div>
     </div>
   </div>
@@ -137,5 +135,6 @@
     <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/perfil.js"></script>
 </body>
 </html>
