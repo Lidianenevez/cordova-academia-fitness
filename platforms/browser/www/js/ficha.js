@@ -23,6 +23,10 @@ function getTreino(treino = null) {
         		return 0;
         	}
 
+        	if(response.ficha == null) {
+        		window.location.href = "/perfil.html";
+        	}
+
         	$('#sequencia').empty();
         	$('#campo-exercicio').empty();
         	$('#treino-de-hoje-id').val(response.treinoDeHoje.id);

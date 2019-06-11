@@ -6,6 +6,9 @@ $(document).ready(function() {
 	        'Authorization': 'Bearer ' + window.localStorage.getItem('token'),
 	    },
         success: function(response) {
+            if(response.ficha == null) {
+                $('#aviso').text('Ficha ainda não criada, por favor, procure o seu instrutor');
+            }
         	$('#modalidade').text(response.aluno.modalidade);
             $('#instrutor').text(response.aluno.nomeDoInstrutor);
             $('#pagamento').text(response.aluno.data_de_pagamento);
