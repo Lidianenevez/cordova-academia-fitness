@@ -7,7 +7,7 @@ $(document).ready(function() {
 	    },
         success: function(response) {
             if(response.ficha == null) {
-                $('#aviso').text('Ficha ainda não criada, por favor, procure o seu instrutor');
+                $('#aviso').text('Sua ficha ainda não foi criada, por favor, procure o seu instrutor.');
             }
         	$('#modalidade').text(response.aluno.modalidade);
             $('#instrutor').text(response.aluno.nomeDoInstrutor);
