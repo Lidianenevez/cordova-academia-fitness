@@ -4,8 +4,15 @@
   "name": "Academia Fitness",
   "short_name": "Academia Fitness",
   "version": "com.academiafitness",
-  "description": "A sample Apache Cordova application that responds to the deviceready event.",
+  "description": "Aplicativo de fichas de treino para os alunos da academia fitness",
   "author": "Apache Cordova Team",
-  "icons": [],
+  "icons": [
+    {
+      "src": "resources/icon.png",
+      "type": "image/png",
+      "sizes": "undefinedxundefined"
+    }
+  ],
+  "orientation": "portrait",
   "start_url": "index.html"
 }
