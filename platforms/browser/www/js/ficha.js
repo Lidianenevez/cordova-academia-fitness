@@ -9,7 +9,7 @@ $('#seleciona-treino').on('submit', function(event) {
 function getTreino(treino = null) {
     $.ajax({
         type: 'GET',
-        url: 'http://127.0.0.1:8000/api/ficha',
+        url: APP_URL + '/api/ficha',
 	    headers: {
 	        'Authorization': 'Bearer ' + window.localStorage.getItem('token'),
 	    },
@@ -137,7 +137,7 @@ $('#finaliza').on('submit', function(event) {
 	event.preventDefault();
     $.ajax({
         type: 'POST',
-        url: 'http://127.0.0.1:8000/api/ultimo-treino',
+        url: APP_URL + '/api/ultimo-treino',
 	    headers: {
 	        'Authorization': 'Bearer ' + window.localStorage.getItem('token'),
 	    },

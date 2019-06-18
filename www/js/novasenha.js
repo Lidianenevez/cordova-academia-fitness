@@ -4,7 +4,7 @@ $('#form-nova-senha').on('submit', function(event) {
 
         $.ajax({
             type: 'POST',
-            url: 'http://127.0.0.1:8000/api/nova-senha',
+            url: APP_URL + '/api/nova-senha',
             headers: {
                 'Authorization': 'Bearer ' + window.localStorage.getItem('token'),
             },
