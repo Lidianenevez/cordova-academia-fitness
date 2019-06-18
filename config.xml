@@ -4,13 +4,13 @@
     <description>
         Aplicativo de fichas de treino para os alunos da academia fitness
     </description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Apache Cordova Team
+    <author email="dev@cordova.apache.org" href="http://localhost:8000">
+       Academia Fitness
     </author>
     <content src="index.html" />
     <allow-navigation href="*"/>
     <icon src="resources/icon.png"/>
-   
+   <preference name="permissions" value="none" />
     <plugin name="cordova-plugin-whitelist" spec="1" />
     <access origin="*" />
     <preference name="Orientation" value="portrait" />
@@ -25,6 +25,7 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    <platform name="android" />
     <platform name="android">
         <allow-intent href="market:*" />
     </platform>
@@ -37,5 +38,6 @@
     <platform name="android">
     <preference name="StatusBarBackgroundColor" value="#04062f"
     />
+    <preference name="AndroidPersistentFileLocation" value="Internal" />
 </platform>
 </widget>

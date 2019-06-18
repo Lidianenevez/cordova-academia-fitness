@@ -9,7 +9,7 @@ $('#seleciona-treino').on('submit', function(event) {
 function getTreino(treino = null) {
     $.ajax({
         type: 'GET',
-        url: 'http://127.0.0.1:8000/api/ficha',
+        url: APP_URL + '/api/ficha',
 	    headers: {
 	        'Authorization': 'Bearer ' + window.localStorage.getItem('token'),
 	    },
@@ -48,7 +48,8 @@ function getTreino(treino = null) {
 					  <div class="row">
 					    <div class="col-4 text-center">
 					      <center>
-					       <button type="button" class="btn" data-toggle="modal" data-target=".modal-${exercicio.exercicio.id}" style="border-radius: 20%; background-color: #fff0; border: none">
+					       <button type="button" class="btn" data-toggle="modal" data-target=".modal-${exercicio.exercicio.id}" style="border-radius: 20%; background-color: #fff0; border: none; outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(253, 254, 255, 0.25)">
 					                <img src="../img/play.svg" style="max-width: 70px; margin-top:20px; margin-left: 20px">
 					                
 					              </button>  
@@ -137,7 +138,7 @@ $('#finaliza').on('submit', function(event) {
 	event.preventDefault();
     $.ajax({
         type: 'POST',
-        url: 'http://127.0.0.1:8000/api/ultimo-treino',
+        url: APP_URL + '/api/ultimo-treino',
 	    headers: {
 	        'Authorization': 'Bearer ' + window.localStorage.getItem('token'),
 	    },

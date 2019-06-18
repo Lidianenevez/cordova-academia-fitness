@@ -45,12 +45,14 @@ var app = {
 
 app.initialize();
 
+let APP_URL = 'http://127.0.0.1:8000';
+
 $('#form-login').on('submit', function(event) {
     event.preventDefault();
     
     $.ajax({
         type: 'POST',
-        url: 'http://127.0.0.1:8000/api/login',
+        url: APP_URL + '/api/login',
         data: {
             cpf: $('#cpf').val(),
             password: $('#password').val(),
@@ -67,3 +69,21 @@ $('#form-login').on('submit', function(event) {
         }
     });
 });
+
+$('#sair').on('click', function() {
+    $.ajax({
+        type: 'POST',
+        url: APP_URL + '/api/logout',
+        headers: {
+            'Authorization': 'Bearer ' + window.localStorage.getItem('token'),
+        },
+        success: function(response) {
+            console.log(response);
+            window.localStorage.removeItem('token');
+            window.location.href = "/index.html";
+        },
+        error: function(erro) {
+            console.log(erro)
+        }
+    });
+})

@@ -1,18 +1,23 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.academiafitness" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <feature name="Whitelist">
-        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
+    <feature name="File">
+        <param name="android-package" value="org.apache.cordova.file.FileUtils" />
         <param name="onload" value="true" />
     </feature>
+    <allow-navigation href="cdvfile:*" />
     <feature name="StatusBar">
         <param name="android-package" value="org.apache.cordova.statusbar.StatusBar" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Whitelist">
+        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
         <param name="onload" value="true" />
     </feature>
     <name>Academia Fitness</name>
     <description>
         Aplicativo de fichas de treino para os alunos da academia fitness
     </description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
+    <author email="dev@cordova.apache.org" href="http://localhost:8000/">
         Apache Cordova Team
     </author>
     <content src="index.html" />
@@ -34,4 +39,5 @@
     <preference name="LoadUrlTimeoutValue" value="20000" />
     <preference name="BackgroundColor" value="0xF2F2F2FF" />
     <preference name="StatusBarBackgroundColor" value="#04062f" />
+    <preference name="AndroidPersistentFileLocation" value="Internal" />
 </widget>
