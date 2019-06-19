@@ -17,8 +17,8 @@
     <description>
         Aplicativo de fichas de treino para os alunos da academia fitness
     </description>
-    <author email="dev@cordova.apache.org" href="http://localhost:8000/">
-        Apache Cordova Team
+    <author email="dev@cordova.apache.org" href="http://localhost:8000">
+       Academia Fitness
     </author>
     <content src="index.html" />
     <allow-navigation href="*" />
@@ -32,6 +32,7 @@
     <allow-intent href="geo:*" />
     <allow-intent href="market:*" />
     <preference name="loglevel" value="DEBUG" />
+    <preference name="permissions" value="none" />
     <preference name="Orientation" value="portrait" />
     <preference name="Fullscreen" value="true" />
     <preference name="DisallowOverscroll" value="true" />
