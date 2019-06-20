@@ -55,8 +55,8 @@ function getTreino(treino = null) {
 					              </button>  
 					          </center>
 					      <div class="custom-control custom-switch" style="margin-top: 10px; padding-left: 3.25rem;">
-					        <input type="checkbox" class="custom-control-input" id="customSwitch1">
-					        <label class="custom-control-label" for="customSwitch1"></label>
+					        <input type="checkbox" class="custom-control-input" id="customSwitch${exercicio.id}">
+					        <label class="custom-control-label" for="customSwitch${exercicio.id}"></label>
 					      </div>
 					    </div>
 					    <div class="col-8">
