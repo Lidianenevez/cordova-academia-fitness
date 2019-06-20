@@ -5,7 +5,7 @@
   "short_name": "Academia Fitness",
   "version": "com.academiafitness",
   "description": "Aplicativo de fichas de treino para os alunos da academia fitness",
-  "author": "Apache Cordova Team",
+  "author": "Academia Fitness",
   "icons": [
     {
       "src": "resources/icon.png",

@@ -1,7 +1,7 @@
 $(document).ready(function() {
     $.ajax({
         type: 'GET',
-        url: 'http://127.0.0.1:8000/api/perfil-aluno',
+        url: APP_URL + '/api/perfil-aluno',
 	    headers: {
 	        'Authorization': 'Bearer ' + window.localStorage.getItem('token'),
 	    },
@@ -38,7 +38,7 @@ $('#form-imagem').on('submit', function(event) {
 
     $.ajax({
         type: 'POST',
-        url: 'http://127.0.0.1:8000/api/upload-imagem',
+        url: APP_URL + '/api/upload-imagem',
         headers: {
             'Authorization': 'Bearer ' + window.localStorage.getItem('token'),
         },

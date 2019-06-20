@@ -12,6 +12,9 @@
     },
     "cordova-plugin-statusbar": {
       "PACKAGE_NAME": "com.academiafitness"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.academiafitness"
     }
   },
   "dependent_plugins": {}
