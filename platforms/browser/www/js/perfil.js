@@ -18,8 +18,9 @@ $(document).ready(function() {
                 $("#foto-aluno").attr("src","http://127.0.0.1:8000/storage/"+response.aluno.imagem);
             }
             if(response.aluno.avaliacao != null) {
-                $("#avaliacao-aluno").attr("href","http://127.0.0.1:8000/storage/avaliacoes/"+response.aluno.avaliacao);
+                $("#avaliacao-aluno").attr("href","http://127.0.0.1:8000/storage/"+response.aluno.avaliacao);
             }
+            console.log(response.aluno.avaliacao);
         },
         error: function(erro) {
             console.log('Não funciona né');
