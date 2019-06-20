@@ -42,6 +42,9 @@ function getTreino(treino = null) {
         	$('#aquecimento').text(response.ficha.aquecimento);
         	$('#intervalo').text(response.ficha.intervalo);
         	$('#observacoes').text(response.ficha.observacoes);
+        	if(response.instrutor_imagem != null) {
+        		$('#instrutor-imagem').attr("src","http://127.0.0.1:8000/storage/"+response.instrutor_imagem);
+        	}
         	$(response.treino).each(function(index, exercicio) {
 	            $('#campo-exercicio').append(
 					`<div class="card mb-3 exercicio" style="max-width: 510px; border-radius: 20px; border: 2px solid #060A4B">

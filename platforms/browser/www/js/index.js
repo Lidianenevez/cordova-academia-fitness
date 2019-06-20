@@ -58,11 +58,13 @@ $('#form-login').on('submit', function(event) {
             password: $('#password').val(),
         },
         success: function(response) {
-            console.log('funcionou essa merda');
-            // console.log(response.success.token);
-            window.localStorage.setItem('token', response.success.token);
-            console.log(window.localStorage.getItem('token'));
-            window.location.href = "/ficha.html";
+            if(response.user.bloqueado == 1) {
+                $('#erro').text('Usuário bloqueado. Por favor, contacte a administração');
+            } else {            
+                window.localStorage.setItem('token', response.success.token);
+                console.log(window.localStorage.getItem('token'));
+                window.location.href = "/ficha.html";
+            }
         },
         error: function(erro) {
             $('#erro').text('CPF ou senha incorretos');
