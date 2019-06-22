@@ -29,6 +29,7 @@ $(document).ready(function() {
     });
 });
 
+
 $('#form-imagem').on('submit', function(event) {
 
     event.preventDefault();

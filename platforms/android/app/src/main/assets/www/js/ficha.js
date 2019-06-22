@@ -42,6 +42,9 @@ function getTreino(treino = null) {
         	$('#aquecimento').text(response.ficha.aquecimento);
         	$('#intervalo').text(response.ficha.intervalo);
         	$('#observacoes').text(response.ficha.observacoes);
+        	if(response.instrutor_imagem != null) {
+        		$('#instrutor-imagem').attr("src","http://127.0.0.1:8000/storage/"+response.instrutor_imagem);
+        	}
         	$(response.treino).each(function(index, exercicio) {
 	            $('#campo-exercicio').append(
 					`<div class="card mb-3 exercicio" style="max-width: 510px; border-radius: 20px; border: 2px solid #060A4B">
@@ -55,8 +58,8 @@ function getTreino(treino = null) {
 					              </button>  
 					          </center>
 					      <div class="custom-control custom-switch" style="margin-top: 10px; padding-left: 3.25rem;">
-					        <input type="checkbox" class="custom-control-input" id="customSwitch1">
-					        <label class="custom-control-label" for="customSwitch1"></label>
+					        <input type="checkbox" class="custom-control-input" id="customSwitch${exercicio.id}">
+					        <label class="custom-control-label" for="customSwitch${exercicio.id}"></label>
 					      </div>
 					    </div>
 					    <div class="col-8">
