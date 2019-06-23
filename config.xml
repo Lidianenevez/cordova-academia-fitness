@@ -39,5 +39,6 @@
     <preference name="StatusBarBackgroundColor" value="#04062f"
     />
     <preference name="AndroidPersistentFileLocation" value="Internal" />
+    
 </platform>
 </widget>

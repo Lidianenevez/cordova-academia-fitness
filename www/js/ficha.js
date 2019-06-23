@@ -53,7 +53,7 @@ function getTreino(treino = null) {
 					      <center>
 					       <button type="button" class="btn" data-toggle="modal" data-target=".modal-${exercicio.exercicio.id}" style="border-radius: 20%; background-color: #fff0; border: none; outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(253, 254, 255, 0.25)">
-					                <img src="../img/play.svg" style="max-width: 70px; margin-top:20px; margin-left: 20px">
+					                <img src="../../img/play.svg" style="max-width: 70px; margin-top:20px; margin-left: 20px">
 					                
 					              </button>  
 					          </center>
@@ -66,8 +66,8 @@ function getTreino(treino = null) {
 					      <div class="card-body text-center" style="margin-right: 20px">
 					        
 					         <h5 class="card-title ficha " ><strong>${exercicio.exercicio.titulo}</strong></h5>
-					        <p class="card-text ficha " style="font-size:16px"><strong>Série:${exercicio.series}  X ${exercicio.repeticoes}</strong> <img src="../img/repeat.png" class="img-fluid" style="max-width: 25px"> </p>
-					        <p class="card-text ficha " style="font-size:16px"><strong>Peso: ${exercicio.peso}kg </strong> <img src="../img/barbell1.png" class="img-fluid" style="max-width: 25px">  </p>
+					        <p class="card-text ficha " style="font-size:16px"><strong>Série:${exercicio.series}  X ${exercicio.repeticoes}</strong> <img src="../../img/repeat.png" class="img-fluid" style="max-width: 25px"> </p>
+					        <p class="card-text ficha " style="font-size:16px"><strong>Peso: ${exercicio.peso}kg </strong> <img src="../../img/barbell1.png" class="img-fluid" style="max-width: 25px">  </p>
 					      </div>
 					    </div>
 					  </div>
