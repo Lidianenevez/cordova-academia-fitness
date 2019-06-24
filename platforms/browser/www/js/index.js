@@ -45,7 +45,7 @@ var app = {
 
 app.initialize();
 
-let APP_URL = 'http://127.0.0.1:8000';
+let APP_URL = 'http://127.0.0.1:8001';
 
 $('#form-login').on('submit', function(event) {
     event.preventDefault();
